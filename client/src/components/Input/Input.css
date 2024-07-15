@@ -1,0 +1,21 @@
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 100%;
+	height: 100%;
+}
+
+#lox-panel {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+#lox-codeinput {
+	width: 100%;
+	height: 100%;
+	resize: none;
+	padding: 1rem;
+}
