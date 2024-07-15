@@ -1,4 +1,4 @@
-form {
+#lox-form {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -13,9 +13,10 @@ form {
 	width: 100%;
 }
 
-#lox-codeinput {
+#lox-prompt {
 	width: 100%;
 	height: 100%;
 	resize: none;
 	padding: 1rem;
+	white-space: nowrap;
 }
