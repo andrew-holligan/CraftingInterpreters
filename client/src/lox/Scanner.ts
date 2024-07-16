@@ -86,10 +86,20 @@ export class Scanner {
 
 			// Special Case Token
 			case "/":
+				// Single Line Comment
 				if (this.match("/")) {
 					// Comments Last the Full Line
 					while (this.peek() != "\n" && !this.isAtEnd())
 						this.advance();
+				}
+				// Multi-Line Comment
+				else if (this.match("*")) {
+					while (!this.isAtEnd()) {
+						// Comments End With */
+						if (this.advance() === "*" && this.match("/")) {
+							break;
+						}
+					}
 				} else {
 					this.addToken(TokenType.SLASH);
 				}
