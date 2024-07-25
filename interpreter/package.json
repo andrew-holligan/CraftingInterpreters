@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "GenerateAst": "ts-node tools/GenerateAst.ts"
+    "GenerateAst": "ts-node tools/GenerateAst.ts",
+    "testAstPrinter": "ts-node lox/AstPrinter.ts"
   },
   "keywords": [],
   "author": "",

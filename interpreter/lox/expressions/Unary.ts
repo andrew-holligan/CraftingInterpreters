@@ -1,9 +1,9 @@
-import {Token} from '../Token.js'
-import {Expression} from './Expression.js'
-import {Visitor} from './Visitor.js'
+import {Token} from '../Token'
+import {Expression} from './Expression'
+import {Visitor} from './Visitor'
 export class Unary extends Expression {
-	private readonly operator: Token;
-	private readonly right: Expression;
+	public readonly operator: Token;
+	public readonly right: Expression;
 	constructor(operator: Token, right: Expression) {
 		super();
 		this.operator = operator;

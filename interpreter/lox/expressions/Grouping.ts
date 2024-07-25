@@ -1,7 +1,7 @@
-import {Expression} from './Expression.js'
-import {Visitor} from './Visitor.js'
+import {Expression} from './Expression'
+import {Visitor} from './Visitor'
 export class Grouping extends Expression {
-	private readonly expression: Expression;
+	public readonly expression: Expression;
 	constructor(expression: Expression) {
 		super();
 		this.expression = expression;

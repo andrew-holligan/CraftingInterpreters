@@ -1,10 +1,10 @@
-import {Expression} from './Expression.js'
-import {Token} from '../Token.js'
-import {Visitor} from './Visitor.js'
+import {Expression} from './Expression'
+import {Token} from '../Token'
+import {Visitor} from './Visitor'
 export class Binary extends Expression {
-	private readonly left: Expression;
-	private readonly operator: Token;
-	private readonly right: Expression;
+	public readonly left: Expression;
+	public readonly operator: Token;
+	public readonly right: Expression;
 	constructor(left: Expression, operator: Token, right: Expression) {
 		super();
 		this.left = left;

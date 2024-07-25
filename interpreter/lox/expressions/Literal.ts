@@ -1,7 +1,7 @@
-import {Expression} from './Expression.js'
-import {Visitor} from './Visitor.js'
+import {Expression} from './Expression'
+import {Visitor} from './Visitor'
 export class Literal extends Expression {
-	private readonly value: Object;
+	public readonly value: Object;
 	constructor(value: Object) {
 		super();
 		this.value = value;

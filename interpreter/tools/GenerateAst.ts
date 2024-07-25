@@ -23,25 +23,25 @@ export class GenerateAst {
 					{ name: "right", type: "Expression" },
 				],
 				imports: [
-					{ name: "Expression", location: "./Expression.js" },
-					{ name: "Token", location: "../Token.js" },
-					{ name: "Visitor", location: "./Visitor.js" },
+					{ name: "Expression", location: "./Expression" },
+					{ name: "Token", location: "../Token" },
+					{ name: "Visitor", location: "./Visitor" },
 				],
 			},
 			{
 				className: "Grouping",
 				fields: [{ name: "expression", type: "Expression" }],
 				imports: [
-					{ name: "Expression", location: "./Expression.js" },
-					{ name: "Visitor", location: "./Visitor.js" },
+					{ name: "Expression", location: "./Expression" },
+					{ name: "Visitor", location: "./Visitor" },
 				],
 			},
 			{
 				className: "Literal",
 				fields: [{ name: "value", type: "Object" }],
 				imports: [
-					{ name: "Expression", location: "./Expression.js" },
-					{ name: "Visitor", location: "./Visitor.js" },
+					{ name: "Expression", location: "./Expression" },
+					{ name: "Visitor", location: "./Visitor" },
 				],
 			},
 			{
@@ -51,9 +51,9 @@ export class GenerateAst {
 					{ name: "right", type: "Expression" },
 				],
 				imports: [
-					{ name: "Token", location: "../Token.js" },
-					{ name: "Expression", location: "./Expression.js" },
-					{ name: "Visitor", location: "./Visitor.js" },
+					{ name: "Token", location: "../Token" },
+					{ name: "Expression", location: "./Expression" },
+					{ name: "Visitor", location: "./Visitor" },
 				],
 			},
 		]);
@@ -66,10 +66,10 @@ export class GenerateAst {
 	): void {
 		GenerateAst.defineExpression(outputDir, baseName);
 		GenerateAst.defineVisitor(outputDir, baseName, types, [
-			{ name: "Binary", location: "./Binary.js" },
-			{ name: "Grouping", location: "./Grouping.js" },
-			{ name: "Literal", location: "./Literal.js" },
-			{ name: "Unary", location: "./Unary.js" },
+			{ name: "Binary", location: "./Binary" },
+			{ name: "Grouping", location: "./Grouping" },
+			{ name: "Literal", location: "./Literal" },
+			{ name: "Unary", location: "./Unary" },
 		]);
 
 		// AST Classes
@@ -91,7 +91,7 @@ export class GenerateAst {
 		});
 
 		// Imports
-		fs.writeFileSync(path, `import {Visitor} from './Visitor.js'\n`, {
+		fs.writeFileSync(path, `import {Visitor} from './Visitor'\n`, {
 			flag: "a",
 		});
 		// Class Signature
@@ -189,7 +189,7 @@ export class GenerateAst {
 		for (const field of fields) {
 			fs.writeFileSync(
 				path,
-				`	private readonly ${field.name}: ${field.type};\n`,
+				`	public readonly ${field.name}: ${field.type};\n`,
 				{
 					flag: "a",
 				}
