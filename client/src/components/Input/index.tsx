@@ -1,4 +1,4 @@
-import { Lox } from "../../lox/Lox";
+import { Lox } from "@interpreter/lox/Lox.ts";
 
 import "./Input.css";
 
