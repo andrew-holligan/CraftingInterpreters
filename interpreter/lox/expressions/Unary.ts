@@ -1,5 +1,6 @@
-import { Expression } from "./Expression";
-import { Token } from "../Token";
+import {Token} from '../Token.js'
+import {Expression} from './Expression.js'
+import {Visitor} from './Visitor.js'
 export class Unary extends Expression {
 	private readonly operator: Token;
 	private readonly right: Expression;
@@ -7,5 +8,8 @@ export class Unary extends Expression {
 		super();
 		this.operator = operator;
 		this.right = right;
+	}
+	accept<R>(visitor: Visitor<R>): R {
+		return visitor.visitUnaryExpression(this);
 	}
 }
