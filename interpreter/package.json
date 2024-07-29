@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "GenerateAst": "ts-node tools/GenerateAst.ts",
-    "testAstPrinter": "ts-node lox/AstPrinter.ts"
+    "testAstPrinter": "ts-node lox/AstPrinter.ts",
+    "testPrnPrinter": "ts-node lox/PrnPrinter.ts"
   },
   "keywords": [],
   "author": "",
